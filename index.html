@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe | Computational Astronomer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        dark: '#0d1117',
+                        'dark-secondary': '#161b22',
+                        'dark-border': '#30363d',
+                        'dark-text': '#c9d1d9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nebula-gradient {
+            background: linear-gradient(135deg, #0d1117 0%, #1a237e 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-mono bg-white dark:bg-dark text-gray-900 dark:text-dark-text min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-dark/80 glass-effect border-b border-gray-200 dark:border-dark-border">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold">Jane Doe</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-blue-500">About</a>
+                    <a href="#outreach" class="hover:text-blue-500">Outreach</a>
+                    <a href="#research" class="hover:text-blue-500">Research</a>
+                    <a href="#publications" class="hover:text-blue-500">Publications</a>
+                    <a href="#blog" class="hover:text-blue-500">Blog</a>
+                    <a href="#contact" class="hover:text-blue-500">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-secondary">
+                        <i class="bi bi-moon-stars dark:hidden"></i>
+                        <i class="bi bi-sun hidden dark:inline"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark border-b border-gray-200 dark:border-dark-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-dark-secondary rounded-md">About</a>
+                <a href="#outreach" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-dark-secondary rounded-md">Outreach</a>
+                <a href="#research" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-dark-secondary rounded-md">Research</a>
+                <a href="#publications" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-dark-secondary rounded-md">Publications</a>
+                <a href="#blog" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-dark-secondary rounded-md">Blog</a>
+                <a href="#contact" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-dark-secondary rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 nebula-gradient">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Exploring the Universe with Code</h1>
+                <p class="text-xl text-gray-300 mb-8">Computational Astrophysics Researcher | Machine Learning Enthusiast</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Get in Touch</a>
+                    <a href="https://github.com" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p>I'm a computational astronomy student passionate about understanding the cosmos through the lens of data science and machine learning. My research focuses on AGN classification, galaxy evolution, and quantum computing applications in astronomy.</p>
+                    <h3 class="text-xl font-bold">Technical Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-dark-secondary rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-dark-secondary rounded-full">SQL</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-dark-secondary rounded-full">TensorFlow</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-dark-secondary rounded-full">PyTorch</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-dark-secondary rounded-full">Astropy</span>
+                    </div>
+                </div>
+                <div class="bg-gray-100 dark:bg-dark-secondary rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Education</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold">Ph.D. in Computational Astrophysics</p>
+                            <p class="text-sm">Expected 2024 • Universe University</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">M.Sc. in Physics</p>
+                            <p class="text-sm">2020 • Space Institute</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Projects -->
+    <section id="research" class="py-16 bg-gray-50 dark:bg-dark-secondary">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Research & Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="bg-white dark:bg-dark rounded-lg border border-gray-200 dark:border-dark-border p-6">
+                    <h3 class="text-xl font-bold mb-2">AGN Classification System</h3>
+                    <p class="text-sm mb-4">Developed a machine learning model for classifying Active Galactic Nuclei using BPT and WHAN diagrams.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded">Python</span>
+                        <span class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded">TensorFlow</span>
+                        <span class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 rounded">Astropy</span>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-700">
+                        <i class="bi bi-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <!-- Add more project cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-2 rounded-lg border dark:bg-dark-secondary dark:border-dark-border">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 rounded-lg border dark:bg-dark-secondary dark:border-dark-border">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Message</label>
+                            <textarea class="w-full px-4 py-2 rounded-lg border dark:bg-dark-secondary dark:border-dark-border" rows="4"></textarea>
+                        </div>
+                        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold">Connect with me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl hover:text-blue-600"><i class="bi bi-github"></i></a>
+                            <a href="#" class="text-2xl hover:text-blue-600"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-2xl hover:text-blue-600"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="text-2xl hover:text-blue-600"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 dark:bg-dark-secondary py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2024 Jane Doe. Built with 💫 and code.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
